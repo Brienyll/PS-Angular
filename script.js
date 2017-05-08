@@ -1,21 +1,22 @@
-// Code goes here
+var createWorker = function(){
 
-var work = function() {
+  var task1 = function(){
+    console.log("task1");
+  };
 
-    console.log("working hard!");
+  var task2 = function(){
+    console.log("task2");
+  };
+
+  return {
+    job1: task1,
+    job2: task2
+  };
 
 };
 
-var doWork = function(f) {
 
-    console.log("starting");
+var worker = createWorker();
 
-    try {
-        f();
-    } catch (ex) {
-        console.log(ex);
-    }
-    console.log("end");
-};
-
-doWork(work);
+worker.job1();
+worker.job2();
