@@ -1,11 +1,15 @@
 var createWorker = function(){
 
+  var workCount = 0;
+
   var task1 = function(){
-    console.log("task1");
+    workCount += 1;
+    console.log("task1 " + workCount);
   };
 
   var task2 = function(){
-    console.log("task2");
+    workCount += 1;
+    console.log("task2 " + workCount);
   };
 
   return {
