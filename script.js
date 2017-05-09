@@ -1,3 +1,5 @@
+(function () {
+
 var createWorker = function(){
 
   var workCount = 0;
@@ -24,3 +26,4 @@ var worker = createWorker();
 
 worker.job1();
 worker.job2();
+}());
